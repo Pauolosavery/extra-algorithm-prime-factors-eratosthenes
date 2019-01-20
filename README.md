@@ -12,7 +12,7 @@ With this approach, we do a lot of unnecessary work. For example, we'll check if
 
 And we do the same thing with three when we later check six, nine, twelve, etc. And the same again for five, checking then ten, fifteen, twenty, etc.
 
-![Sieve of Eratosthenes](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
+![Решето Эратосфена](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
 
 *Figure 1*.  Using the Sieve of Eratosthenes to find a collection of prime numbers less than 121.
 
