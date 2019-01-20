@@ -8,20 +8,20 @@
 
 В коде, с которым мы будем работать, чтобы найти простой множитель данного числа, мы пробегаем через все числа от 1 до данного, пока не найдем простой множитель. Проверяем 1, потом 2, потом 3, 4, 5, 6 и так далее.
 
-With this approach, we do a lot of unnecessary work. For example, we'll check if a given number is divisible by two.  And then we'll check to see if the number is divisible by four, six, eight, and all the other even numbers in the range.  But we know that if a number was divisible by four, six, or eight, it would have already been found to be divisible by two.  Said the other way, if the number was not divisible by two, it won't be divisible by any other even number.
+При таком подходе мы совершаем много ненужной работы. Например, проверим, делится ли данное число на 2. А потом мы проверим, делится ли оно на 4, 6, 8 и так далее со всеми четными числами. Но мы знаем, что если число делится на 4, 6, 8 и вообще любое четное число, то оно точно делится на 2. Другими словами, если число не делится на 2, то оно не делится ни на одно четное число.
 
-And we do the same thing with three when we later check six, nine, twelve, etc. And the same again for five, checking then ten, fifteen, twenty, etc.
+И далее проведем тоже самое с 3 - то есть проверим 6, 9, 12 и так далее. Аналогично для 5 - 10, 15, 20, и т.д.
 
 ![Sieve of Eratosthenes](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
 
-*Figure 1*.  Using the Sieve of Eratosthenes to find a collection of prime numbers less than 121.
+*рис 1*.  Использование Решета Эратосфена для того, чтобы найти простые числа менее 121.
 
-The Sieve of Eratosthenes helps us by creating a collection of prime numbers that we could iterate over to avoid this unnecessary work.  Wikipedia provides an [overview][SoE overview] of how to create the collection of numbers, which has been translated into the following steps.  Figure 1 depicts this process visually.
+Решето Эратосфена помогает нам, создавая набор простых чисел, по которому мы можем проходить, чтобы избегать ненужной работы. Википедия предоставляет [алгоритм][РЭ алгоритм] того, как создать такой набор, который представлен в следующих шагах. Рис1 описывает этот процесс визуально.
 
-1. Create a list of consecutive integers from 2 through *n*:  2, 3, 4, ... *n*.
-2. Take the first number in the list (i.e., 2) and remove all of its multiples (e.g., 4, 6, 8, 10, etc.).
-3. Take the next remaining number in the list (i.e., 3) and remove all of its multiples from the list.
-4. Repeat Step 3 until all numbers in the list have been checked. 
+1. Создайте список последовательных целых чисел от 2 до *n*:  2, 3, 4, ... * n *.
+2. Возьмите первое число в списке (например, 2) и удалите все, кратные ему (4, 6, 8, 10 и т.д.)
+3. Возьмите следующее оставшееся число из списка (например, 3) и удалите все, кратные ему.
+4. Повторяйте шаг 3 до тех пор, пока все числа в списке не будут проверены.
 
 
 ## Releases
@@ -51,4 +51,4 @@ In this challenge we were given a specific algorithm to implement in code.  We w
 
 [algorithm-drill-prime-factors-challenge]: ../../../algorithm-drill-prime-factors-challenge
 [Решето Эратосфена]: https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0
-[SoE overview]: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Overview
+[РЭ алгоритм]: https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0#%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC
