@@ -25,28 +25,28 @@
 
 
 ## Releases
-### Release 0: Implement the Sieve of Eratosthenes
-```ruby
-sieve_of_eratosthenes(10)
+### Release 0: Реализуйте Решето Эратосфена
+```JS
+sieveOfEratosthenes(10)
 # => [2, 3, 5, 7]
 ```
-*Figure 2*.  Example usage of the `sieve_of_eratosthenes` method.
+*рис 2*.  Пример использования метода `sieveOfEratosthenes`.
 
-After we understand how the Sieve of Eratosthenes works, let's write a method `sieve_of_eratosthenes` which takes as its input an integer and returns all prime numbers less than that number (see Figure 2).  As always, we'll want to test that our method is working as we expect.  
+После того, как мы поняли, как работает Решето Эратосфена, давайте реализуем метод `sieveOfEratosthenes`, который на вход принимает число и возвращает все простые числа, которые меньше данного. Как всегда, мы хотим на тестах убедиться, что наш метод работает так, как полагается.
 
-Remember that our tests should describe the behavior of our method: given a specific number as input, the method returns a specific value.  The tests won't reflect our implementation, but the challenge here is not just to return prime numbers less than a given number.  The challenge is to do so using the Sieve of Eratosthenes algorithm.
+Помните, что наши тесты должны описывать поведение нашей функции: принимая на вход определенное число, метод возвращает определенное значение. Тесты не отражают нашу реализацию, но задача здесь не просто в том, чтобы вернуть простые числа, которые меньше заданного. Нужно сделать это, используя алгоритм Решета Эратосфена.
 
-*Note:* In trying to understand how the sieve works, use pencil and paper, a whiteboard, whatever we need to help ourselves understand.
-
-
-### Release 1: Refactor How We Find Prime Factors
-We have a working codebase that will find the prime factors of a given number.  We want to refactor the code base to make use of our `sieve_of_eratosthenes` method.
-
-We're free to change any of the provided code, but the behavior of the `prime_factors` method should not change.  Tests have been provided for this method.  They pass given the provided codebase, and they should continue to pass after our refactoring.
+*Замечание:* Чтобы понять, как работает решето, используейте ручку и бумагу, доску или что-либо другое, что поможет в понимании.
 
 
-## Conclusion
-In this challenge we were given a specific algorithm to implement in code.  We were also given a working codebase that we needed to understand before we could refactor.  Did we struggle with either or both of these?  Was it hard to understand the algorithm?  Was it hard to translate it into code?  Was it hard to understand how the methods in the codebase worked together?  If we struggled with any aspects of this challenge, do we understand where and why we faced these struggles?  And, how can we improve our abilities now that we've identified these areas?
+### Release 1: Измените то, как мы находим простые множители.
+У нас есть рабочий код, который находит простые множители данного числа. Мы хотим изменить этот код так, чтобы использовать наш метод `sieveOfEratosthenes`.
+
+Можно менять любой из предоставленного кода, но поведение метода `primeFactors` должно остаться неизменным. Для этого метода написаны тесты. Они проходят на данном коде и должны продолжить проходить после рефакторинга.
+
+
+## Заключение
+В этом задании нам нужно было реализовать определенный алгоритм. Также нам был дан рабочий код, который нужно было понять перед рефакторингом. Испытывали ли вы трудности в чем-либо из этого? Было ли сложно понять алгоритм? Было ли сложно перевести его в код? Возникли ли трудности в понимании того, как работают методы из данного кода вместе? Если вы испытали трудности в каком-либо аспекте этого задания, понимаете ли вы где и почему вы столкнулись с ними? Что вы можете улучшить после того, как определили проблемные области?
 
 
 [algorithm-drill-prime-factors-challenge]: ../../../algorithm-drill-prime-factors-challenge
