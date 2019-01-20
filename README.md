@@ -1,7 +1,7 @@
-# Prime Factors: Sieve Of Eratosthenes
+# Простые Множители: Решето Эратосфена
 
-## Summary
-In this challenge we're going to refactor a working solution to the *[algorithm-drill-prime-factors-challenge][]* that we've previously completed.  A working codebase has been provided.  We're going to refactor the code to use a specific algorithm for iterating over the possible prime factors of a number.
+## Введение
+В этом задании мы проведем рефакторинг рабочего решения *[algorithm-drill-prime-factors-challenge][]*,  которые мы ранее выполнили. Рабочий код предоставлен. Мы собираемся изменить код так, чтобы использовать определенный алгоритм для нахождения возможного разложения числа на простые множители.
 
 ### Sieve of Eratosthenes 
 We're going to refactor the provided code to use one of the oldest known algorithms, the [Sieve of Eratosthenes][].
