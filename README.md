@@ -3,8 +3,8 @@
 ## Введение
 В этом задании мы проведем рефакторинг рабочего решения *[algorithm-drill-prime-factors-challenge][]*,  которые мы ранее выполнили. Рабочий код предоставлен. Мы собираемся изменить код так, чтобы использовать определенный алгоритм для нахождения возможного разложения числа на простые множители.
 
-### Sieve of Eratosthenes 
-We're going to refactor the provided code to use one of the oldest known algorithms, the [Sieve of Eratosthenes][].
+### Решето Эратосфена
+Мы собираемся изменить предоставленный код, чтобы использовать один из самых старых алгоритмов, [Решето Эратосфена][]
 
 In the codebase we'll be working with, to find a prime factor of a given number, we run through all the numbers between one and that given number until we find a prime factor.  We check one, then two, then three, four, five, six, etc.
 
