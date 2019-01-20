@@ -4,9 +4,9 @@
 В этом задании мы проведем рефакторинг рабочего решения *[algorithm-drill-prime-factors-challenge][]*,  которые мы ранее выполнили. Рабочий код предоставлен. Мы собираемся изменить код так, чтобы использовать определенный алгоритм для нахождения возможного разложения числа на простые множители.
 
 ### Решето Эратосфена
-Мы собираемся изменить предоставленный код, чтобы использовать один из самых старых алгоритмов, [Sieve of Eratosthenes][]
+Мы собираемся изменить предоставленный код, чтобы использовать один из самых старых алгоритмов, [Решето Эратосфена][]
 
-In the codebase we'll be working with, to find a prime factor of a given number, we run through all the numbers between one and that given number until we find a prime factor.  We check one, then two, then three, four, five, six, etc.
+В коде, с которым мы будем работать, чтобы найти простой множитель данного числа, мы пробегаем через все числа от 1 до данного, пока не найдем простой множитель. Проверяем 1, потом 2, потом 3, 4, 5, 6 и так далее.
 
 With this approach, we do a lot of unnecessary work. For example, we'll check if a given number is divisible by two.  And then we'll check to see if the number is divisible by four, six, eight, and all the other even numbers in the range.  But we know that if a number was divisible by four, six, or eight, it would have already been found to be divisible by two.  Said the other way, if the number was not divisible by two, it won't be divisible by any other even number.
 
@@ -50,5 +50,5 @@ In this challenge we were given a specific algorithm to implement in code.  We w
 
 
 [algorithm-drill-prime-factors-challenge]: ../../../algorithm-drill-prime-factors-challenge
-[Sieve of Eratosthenes]: http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+[Решето Эратосфена]: https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0
 [SoE overview]: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Overview
