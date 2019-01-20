@@ -4,7 +4,7 @@
 В этом задании мы проведем рефакторинг рабочего решения *[algorithm-drill-prime-factors-challenge][]*,  которые мы ранее выполнили. Рабочий код предоставлен. Мы собираемся изменить код так, чтобы использовать определенный алгоритм для нахождения возможного разложения числа на простые множители.
 
 ### Решето Эратосфена
-Мы собираемся изменить предоставленный код, чтобы использовать один из самых старых алгоритмов, [Решето Эратосфена][]
+Мы собираемся изменить предоставленный код, чтобы использовать один из самых старых алгоритмов, [Sieve of Eratosthenes][]
 
 In the codebase we'll be working with, to find a prime factor of a given number, we run through all the numbers between one and that given number until we find a prime factor.  We check one, then two, then three, four, five, six, etc.
 
@@ -12,7 +12,7 @@ With this approach, we do a lot of unnecessary work. For example, we'll check if
 
 And we do the same thing with three when we later check six, nine, twelve, etc. And the same again for five, checking then ten, fifteen, twenty, etc.
 
-![Решето Эратосфена](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
+![Sieve of Eratosthenes](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
 
 *Figure 1*.  Using the Sieve of Eratosthenes to find a collection of prime numbers less than 121.
 
