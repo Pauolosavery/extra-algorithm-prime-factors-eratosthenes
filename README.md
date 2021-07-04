@@ -30,7 +30,7 @@ Eratosthenes' Sieve helps us by creating a set of prime numbers that we can walk
 sieveOfEratosthenes(10)
 # => [2, 3, 5, 7]
 ```
-*Example of using the `sieveOfEratosthenes(n)` method.
+*Example of using the `sieveOfEratosthenes(n)` method.*
 
 After you understand how the Eratosthenes Sieve works, let's implement the `sieveOfEratosthenes` method, which takes a number as input and returns all prime numbers that are less than a given number. As always, you need to test to make sure that your method works as it is supposed to.
 
