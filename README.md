@@ -1,43 +1,43 @@
-## Простые Множители. Решето Эратосфена
+## Simple Multipliers. Eratosthenes' sieve
 
-В этом задании тебе необходимо провести рефакторинг рабочего решения *[поиска простых множителей][]*, которое ты ранее выполнил. Рабочий код предоставлен в текущем репозитории. Надо изменить этот код так, чтобы использовать определенный алгоритм для нахождения возможного разложения числа на простые множители.
+In this assignment, you need to refactor a working solution *[search for simple multipliers][]* that you previously completed. The working code is provided in the current repository. You need to modify that code so that you can use a specific algorithm to find a possible prime factorization of a number.
 
-### Решето Эратосфена
+### Eratosthenes' Sieve
 
-Тебе нужно будет использовать один из самых старых алгоритмов - [Решето Эратосфена][]
+You'll need to use one of the oldest algorithms, [Eratosthenes' Sieve][].
 
-В коде, с которым ты будешь работать, чтобы найти простой множитель данного числа, ты пробегаешь через все числа от 1 до данного, пока не найдешь простой множитель. Проверяются сначала число 1, потом - 2, потом - 3, 4, 5, 6 и так далее.
+In the code you're going to search for the prime multiplier of a given number, running through all the numbers from 1 to the given number until you find the prime multiplier. You check first number 1, then number 2, then number 3, 4, 5, 6, and so on.
 
-При таком подходе совершается много ненужной работы. Например, проверяется, делится ли данное число на 2, а потом - делится ли оно на 4, 6, 8 и так далее со всеми четными числами. Но мы знаем, что если число делится на 4, 6, 8 и вообще любое четное число, то оно точно делится на 2. Другими словами, если число не делится на 2, то оно не делится ни на одно четное число.
+This approach does a lot of unnecessary work. For example, we check if a given number is divisible by 2, and then check if it is divisible by 4, 6, 8, and so on with all even numbers. But we know that if a number is divisible by 4, 6, 8, or any even number, then it is exactly divisible by 2. In other words, if a number is not divisible by 2, then it is not divisible by any even number.
 
-И далее можно провести ту же операцию с числом 3 - то есть проверить деление на 6, 9, 12 и так далее. Аналогично для 5 - 10, 15, 20, и т. д.
+And then you can perform the same operation with number 3 - that is, check the division by 6, 9, 12, and so on. Similarly for 5 - 10, 15, 20, etc.
 
 ![Sieve of Eratosthenes](http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
 
-*Использование Решета Эратосфена для того, чтобы найти простые числа менее 121*
+*Use the Eratosthenes' Sieve to find prime numbers less than 121
 
-Решето Эратосфена помогает нам, создавая набор простых чисел, по которому мы можем проходить, чтобы избегать ненужной работы. Википедия предоставляет [алгоритм][РЭ алгоритм] того, как создать такой набор, который представлен в следующих шагах. Рисунок выше описывает этот процесс визуально.
+Eratosthenes' Sieve helps us by creating a set of prime numbers that we can walk through to avoid unnecessary work. Wikipedia provides [algorithm][RE algorithm] of how to create such a set, which is presented in the following steps. The figure above describes this process visually.
 
-1. Создай список последовательных целых чисел от 2 до *n*:  2, 3, 4, ... *n*
-2. Возьми первое число в списке (например, 2) и удали все кратные ему (4, 6, 8, 10 и т.д.)
-3. Возьми следующее оставшееся число из списка (например, 3) и удали все кратные ему
-4. Повторяй шаг 3 до тех пор, пока все числа в списке не будут проверены.
+1. Create a list of consecutive integers from 2 to *n*:  2, 3, 4, ... *n*
+2. Take the first number in the list (for example, 2) and remove all multiples of it (4, 6, 8, 10, etc.)
+3. Take the next remaining number in the list (e.g. 3) and remove all multiples of it
+4. Repeat step 3 until all the numbers in the list are checked.
 
 
-### Release 0. Реализация Решета Эратосфена
+### Release 0. The implementation of Eratosthenes' Sieve
 
-```javascript
+``javascript.
 sieveOfEratosthenes(10)
 # => [2, 3, 5, 7]
 ```
-*Пример использования метода `sieveOfEratosthenes(n)`*
+*Example of using the `sieveOfEratosthenes(n)`` method.
 
-После того, как ты понял(а), как работает Решето Эратосфена, давай реализуем метод `sieveOfEratosthenes`, который на вход принимает число и возвращает все простые числа, которые меньше заданного числа. Как всегда, необходимо на тестах убедиться, что твой метод работает так, как полагается.
+After you understand how the Eratosthenes Sieve works, let's implement the `sieveOfEratosthenes` method, which takes a number as input and returns all prime numbers that are less than a given number. As always, you need to test to make sure that your method works as it is supposed to.
 
-Помни, что твои тесты должны описывать поведение функции: принимая на вход определенное число, метод возвращает определенное значение. Тесты не отражают твою реализацию, но задача здесь не просто в том, чтобы вернуть простые числа, которые меньше заданного. Нужно сделать это, используя алгоритм Решета Эратосфена.
+Remember that your tests should describe the behaviour of the function: taking a certain number as input, the method returns a certain value. The tests don't reflect your implementation, but the goal here is not just to return prime numbers that are smaller than a given number. You need to do it using Eratosthenes' Sieve algorithm.
 
-*Замечание:* Чтобы понять, как работает решето, используй ручку и бумагу, доску или что-либо другое, что поможет тебе в понимании.
+*Note:* To understand how the Sieve works, use a pen and paper, a blackboard, or anything else that will help you understand.
 
-[поиска простых множителей]: ../../../algorithm-drill-prime-factors-challenge
+[search for simple multipliers]: .../.../algorithm-drill-prime-factors-challenge
 [Решето Эратосфена]: https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0
 [РЭ алгоритм]: https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%AD%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%84%D0%B5%D0%BD%D0%B0#%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC
