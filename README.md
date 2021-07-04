@@ -4,7 +4,7 @@ In this assignment, you need to refactor a working solution *[search for simple 
 
 ### Eratosthenes' Sieve
 
-You'll need to use one of the oldest algorithms, [Eratosthenes' Sieve][https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes].
+You'll need to use one of the oldest algorithms, [Eratosthenes' Sieve](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes).
 
 In the code you're going to search for the prime multiplier of a given number, running through all the numbers from 1 to the given number until you find the prime multiplier. You check first number 1, then number 2, then number 3, 4, 5, 6, and so on.
 
